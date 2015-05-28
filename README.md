@@ -13,6 +13,7 @@ Example: `GET /v1/products`
 Resource names should represent collections, not commands. For example, in the case of a “product” collection:
 
 Example | Translation
+--- | ---
 `GET /v1/products` | give me all the products
 `GET /v1/products/123` | give me the product with this id
 `POST /v1/products` | here’s a new product to create
@@ -26,6 +27,7 @@ Example | Translation
 For GET calls that return a collection, the following options will be available via query string arguments:
 
 Argument | Description
+--- | ---
 `limit` | The limit of items per page.
 `page` | The page number that should be returned based on the total number of items and the limit of items per page.
 `desc` | Sorting the entire collection in descending order by one property name.
@@ -38,6 +40,7 @@ Example: `GET /v1/products?limit=2&page=1&desc=name`
 Requests made to the API will accept the following headers to provide more information about the request or requestor.
 
 Header | Description
+--- | ---
 `X-DeviceId` | The id of the device making the request.
 
 
@@ -46,11 +49,14 @@ Header | Description
 ## Successful Status Codes:
 
 Code | Description
+--- | ---
 `200` | Should be used for successful responses where there is a response payload of some sort. (ex GET)
 `202` | Should be used in the case that a successful response does not carry a payload (ex: POST, PUT, PATCH, DELETE).
 
 ## Failure Status Codes:
 
+Code | Description
+--- | ---
 `403` | Forbidden means the user is already logged in but doesn’t have permission to access the requested resource.
 `401` | Unauthorized means that the user is not logged in yet and tried to access an area that requires authentication.
 `404` | Not found means the user tried to access a resource that doesn’t exist. This can apply to mal-formed urls but also to well-formed urls but the resource doesn’t exist in the database.
@@ -59,7 +65,7 @@ Code | Description
 
 ## Arrays:
 
-Responses that return an array of items should contain a common structure. Given the following request to  GET /v1/items?limit=2&page=1&desc=name:
+Responses that return an array of items should contain a common structure. Given the following request to `GET /v1/items?limit=2&page=1&desc=name`:
 
 ```
 {
@@ -79,6 +85,7 @@ Responses that return an array of items should contain a common structure. Given
 ## Data Types:
 
 Type | Description
+--- | ---
 `string` | Needs descr
 `int` | Needs descr
 `datetime` | Javascript Date format as suggested in http://stackoverflow.com/questions/10286204/the-right-json-date-format Example: `2012-04-23T18:25:43.511Z`
@@ -88,5 +95,6 @@ Type | Description
 All responses should include the following headers:
 
 Header | Description
+--- | ---
 `X-Duration` | How long the request took to complete.
 `X-Time` | When the request was executed on the server.
