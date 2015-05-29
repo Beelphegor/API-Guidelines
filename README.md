@@ -1,6 +1,6 @@
-# API-Guidelines
+# Contributions
 
-This is a living document. Change it as needed. After the first release, we should version this document along with the API so that there is no impedance mismatch. -Byron
+If you have a way to improve or advance this document, please fork the repo, make your changes, and submit a pull request. Upon review and approval, your PR will be merged. 
 
 # Requests
 ## Versioning:
