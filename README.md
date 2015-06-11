@@ -60,7 +60,7 @@ Code | Description
 `403` | Forbidden means the user is already logged in but doesn’t have permission to access the requested resource.
 `401` | Unauthorized means that the user is not logged in yet and tried to access an area that requires authentication.
 `404` | Not found means the user tried to access a resource that doesn’t exist. This can apply to mal-formed urls but also to well-formed urls but the resource doesn’t exist in the database.
-`400` | Bad request means the request failed some level of validation of the input submitted. No work has been done. Response should include some common structure: `{ failures: [{ property: ‘name’, message: ‘The name is required.' }] }`
+`400` | Bad request means the request failed some level of validation of the input submitted. No work has been done. Response should include some common structure: `{ failures: [{ property: ‘name’, failureType: ‘missing' }] }`
 `500` | Unhandled exception (should be rare). Response should include some common structure: `{ message: ‘Something horrible happened. The swat team has been notified.’ }` (The exception should be logged and the dev team be notified.)
 
 ## Arrays:
