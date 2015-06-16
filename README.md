@@ -35,15 +35,6 @@ Argument | Description
 
 Example: `GET /v1/products?limit=2&page=1&desc=name`
 
-## Request Headers:
-
-Requests made to the API will accept the following headers to provide more information about the request or requestor.
-
-Header | Description
---- | ---
-`X-DeviceId` | The id of the device making the request.
-
-
 # Responses
 
 ## Successful Status Codes:
