@@ -60,8 +60,8 @@ Responses that return an array of items should contain a common structure. Given
 
 ```
 {
-	Page: 1, // the page number
-	Items: 2, // the number of items in the array
+	PageNumber: 1, // the page number
+	PageSize: 2, // the number of items in the array
 	TotalPages: 5, 	// the total number of pages based on the 
 			// totalItems and the items per page (limit)
 	TotalItems: 10, // the number of items in the collection
