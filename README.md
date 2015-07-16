@@ -26,12 +26,12 @@ Example | Translation
 
 For GET calls that return a collection, the following options will be available via query string arguments:
 
-Argument | Description
---- | ---
-`limit` | The limit of items per page.
-`page` | The page number that should be returned based on the total number of items and the limit of items per page.
-`desc` | Sorting the entire collection in descending order by one property name.
-`asc` | Sorting the entire collection in ascending order by one property name.
+Argument | Type | Description
+--- | --- | ---
+`pageSize` | `number` | The limit of items per page.
+`pageNumber` | `number` | The page number that should be returned based on the total number of items and the limit of items per page.
+`sortBy` | `text` | Sorting the entire collection by one property name.
+`sortDirection` | `Ascending` or `Descending` | The direction in which to sort the items in the collection.
 
 Example: `GET /v1/products?limit=2&page=1&desc=name`
 
