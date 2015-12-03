@@ -5,7 +5,7 @@ If you have a way to improve or advance this document, please fork the repo, mak
 # Requests
 ## Versioning:
 
-The API might change between releases. In the event that there are changes to the requests or responses, the old AND new API’s will be available (while Rewardle agrees to support those old versions). The version number will in the first route segment, after the TLD:
+The API might change between releases. In the event that there are changes to the requests or responses, the old AND new API’s will be available. The version number will in the first route segment, after the TLD:
 
 Example: `GET /v1/products`
 
